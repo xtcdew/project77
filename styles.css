@@ -3,7 +3,7 @@
 :root {
 	--slide-width: min(25vw, 300px);
 	--slide-aspect: 2 / 3;
-
+	
 	--slide-transition-duration: 800ms;
 	--slide-transition-easing: ease;
 
