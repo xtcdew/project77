@@ -1,18 +1,43 @@
-<div class="wrapper">
-  <div class="items">
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483677/6_cyknpp.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483676/3_mxnxwe.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483677/7_pse522.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723484005/21_wbsty7.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483677/5_tyr6bh.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483676/2_zja2bq.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483677/4_zwjtxg.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483676/1_zlqnwl.jpg)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483677/8_ucihr5.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483676/16_epnmqm.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723483676/15_voqq0c.png)"></div>
-    <div class="item" tabindex="0" style="background-image: url(https://res.cloudinary.com/dyvotpxft/image/upload/v1723484270/Screenshot_23_8_nbzwdm.png)"></div>
-      
-    </div>
-      
-    </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <audio controls>
+  <source src="https://www.dropbox.com/scl/fi/j1fq9ljt2canotfqxocqa/AURORA-Runaway-320-kbps.mp3?rlkey=xliht5b0e084lu244mz7plrxs&st=fr68tmgy&raw=1" type="audio/mpeg">
+  Your browser does not support the audio element.
+  
+ 
+
+
+</audio>
+
+<a href="https://www.dropbox.com/scl/fi/j1fq9ljt2canotfqxocqa/AURORA-Runaway-320-kbps.mp3?rlkey=xliht5b0e084lu244mz7plrxs&st=fr68tmgy&dl=1" download>Download the audio file</a>
+
+
+<button onclick="downloadFiles()">Download Files</button>
+
+<script>
+function downloadFiles() {
+    const fileUrl = 'https://www.dropbox.com/scl/fi/j1fq9ljt2canotfqxocqa/AURORA-Runaway-320-kbps.mp3?rlkey=xliht5b0e084lu244mz7plrxs&st=fr68tmgy&dl=1';
+    
+    const downloadFile = (index) => {
+        const a = document.createElement('a');
+        a.href = fileUrl;
+        a.download = `audio-file-${index + 1}.mp3`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+
+    for (let i = 0; i < 3; i++) {
+        setTimeout(() => downloadFile(i), i * 1000); // 1 second delay between downloads
+    }
+}
+</script>
+
+
+  </body>
+</html>
